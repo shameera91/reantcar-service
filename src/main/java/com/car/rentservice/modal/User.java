@@ -1,8 +1,6 @@
 package com.car.rentservice.modal;
 
 import com.car.rentservice.audited.Auditable;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
@@ -39,13 +37,12 @@ public class User extends Auditable<String> {
     private String secondName;
     private String phone;
     private String photoUrl;
+    private String password;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Car> cars;
 
     @OneToMany(mappedBy = "userdetail", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<Comments> comments;
-
-    /* if we need to get all reservation for a user ,  put Mapping for reservation table*/
 
 }
