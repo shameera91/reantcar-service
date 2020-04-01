@@ -39,7 +39,7 @@ public class Comments extends Auditable<String> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     @JsonIgnore
-    private User userdetail;
+    private User user;
 
     private String serialNumber;
 }

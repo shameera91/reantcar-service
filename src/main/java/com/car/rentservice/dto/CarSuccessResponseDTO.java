@@ -35,5 +35,5 @@ public class CarSuccessResponseDTO {
     private final List<String> imageUrl;
     private final UserOutputDTO owner;
 
-    /* booked periods */    /* this has to get by writing a get query for Reservations table*/
+    private final BookedPeriodsDTO bookedPeriods;
 }
