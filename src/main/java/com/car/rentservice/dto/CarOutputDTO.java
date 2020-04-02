@@ -1,6 +1,5 @@
 package com.car.rentservice.dto;
 
-import com.car.rentservice.modal.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -13,7 +12,7 @@ import java.util.Map;
  */
 @Getter
 @AllArgsConstructor
-public class CarSuccessResponseDTO {
+public class CarOutputDTO {
 
     private final String serialNumber;
     private final String make;
@@ -33,7 +32,8 @@ public class CarSuccessResponseDTO {
     private final String about;
     private final Map<String, String> pickUpPlace;
     private final List<String> imageUrl;
-    private final UserOutputDTO owner;
 
-    private final BookedPeriodsDTO bookedPeriods;
+    private final OwnerOutputDTO owner;
+
+    private final List<BookedPeriodsDTO> bookedPeriods;
 }

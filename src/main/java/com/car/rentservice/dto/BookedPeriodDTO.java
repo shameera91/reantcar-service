@@ -7,11 +7,11 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
- * Created By Shameera.A on 4/1/2020
+ * Created By Shameera.A on 4/2/2020
  */
 @Getter
 @AllArgsConstructor
-public class BookedPeriodsDTO {
+public class BookedPeriodDTO {
 
     private final String orderNumber;
     private final LocalDateTime startDateTime;
@@ -19,5 +19,4 @@ public class BookedPeriodsDTO {
     private final boolean paid;
     private final BigDecimal amount;
     private final LocalDateTime bookingDate;
-    private final BookedPersonOutputDTO bookedPerson;
 }
