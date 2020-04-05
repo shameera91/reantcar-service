@@ -18,6 +18,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.util.List;
@@ -61,9 +62,12 @@ public class Car extends Auditable<String> {
     @Column(columnDefinition = "TEXT")
     private String about;
 
-    @Convert(converter = MapConverter.class)
+    @OneToOne
+    private PickUpPlace pickUpPlace;
+
+    /*@Convert(converter = MapConverter.class)
     @Column(columnDefinition = "TEXT")
-    private Map<String, String> pickUpPlace;
+    private Map<String, String> pickUpPlace;*/
 
     @Convert(converter = StringListConverter.class)
     @Column(columnDefinition = "TEXT")

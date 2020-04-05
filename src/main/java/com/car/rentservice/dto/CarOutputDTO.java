@@ -5,7 +5,6 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created By Shameera.A on 4/1/2020
@@ -30,7 +29,8 @@ public class CarOutputDTO {
     private final BigDecimal pricePerDay;
     private final int distanceIncluded;
     private final String about;
-    private final Map<String, String> pickUpPlace;
+    /*private final Map<String, String> pickUpPlace*/;
+    private final PickUpPlaceDTO pickUpPlace;
     private final List<String> imageUrl;
 
     private final OwnerOutputDTO owner;

@@ -1,8 +1,9 @@
 package com.car.rentservice.dto;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
@@ -11,17 +12,12 @@ import java.time.LocalDateTime;
  */
 
 @Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class ReservationInputDTO {
 
-    private final LocalDateTime startDateTime;
-    private final LocalDateTime endDateTime;
-    private final BookedPersonOutputDTO bookedPerson;
-
-    @JsonCreator
-    public ReservationInputDTO(@JsonProperty("startDateTime")LocalDateTime startDateTime, @JsonProperty("endDateTime")LocalDateTime endDateTime,
-                               @JsonProperty("bookedPerson")BookedPersonOutputDTO bookedPerson) {
-        this.startDateTime = startDateTime;
-        this.endDateTime = endDateTime;
-        this.bookedPerson = bookedPerson;
-    }
+    private LocalDateTime startDateTime;
+    private LocalDateTime endDateTime;
+    private BookedPersonOutputDTO bookedPerson;
 }

@@ -6,7 +6,6 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created By Shameera.A on 4/1/2020
@@ -30,7 +29,8 @@ public class CarInputDTO {
     private final BigDecimal pricePerDay;
     private final int distanceIncluded;
     private final String about;
-    private final Map<String, String> pickUpPlace;
+    private final PickUpPlaceDTO pickUpPlace;   /* save this details into the Pickup place table and get the id and update the Car table PickpuPlace column with that id*/
+    /*private final Map<String, String> pickUpPlace;*/
     private final List<String> imageUrl;
     private final long userId;
 
@@ -40,7 +40,7 @@ public class CarInputDTO {
                        @JsonProperty("gear") String gear, @JsonProperty("wheelsDrive") String wheelsDrive, @JsonProperty("doors") int doors,
                        @JsonProperty("seats") int seats, @JsonProperty("fuelConsumption") BigDecimal fuelConsumption, @JsonProperty("features") List<String> features,
                        @JsonProperty("carClass") String carClass, @JsonProperty("pricePerDay") BigDecimal pricePerDay, @JsonProperty("distanceIncluded") int distanceIncluded,
-                       @JsonProperty("about") String about, @JsonProperty("pickUpPlace") Map<String, String> pickUpPlace, @JsonProperty("imageUrl") List<String> imageUrl,
+                       @JsonProperty("about") String about, @JsonProperty("pickUpPlace") PickUpPlaceDTO pickUpPlace, @JsonProperty("imageUrl") List<String> imageUrl,
                        @JsonProperty("userId") long userId) {
         this.serialNumber = serialNumber;
         this.make = make;
